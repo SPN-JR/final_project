@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Sakti PN</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="textBx">
+            <h2>Hello, I'm<br><span>Sakti Prawira Negara.</span></h2>
+            <h3>I'm a Full Stack Web Developer.</h3>
+            <a href="#about" class="btn">About Me</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About</h2>
+            <p>---</p>
+        </div>
+        <div class="content">
+            <div class="contentBx w50">
+                <h3>I'm a Full Stack Web Developer.</h3>
+                <p>Hallo, nama saya Sakti. Saya sangat senang dengan dunia teknologi.</p>
+            </div>
+            <div class="w50">
+                <img src="images/img1.jpg" class="img" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <div class="heading">
+            <h2>Portfolio</h2>
+            <p>---</p>
+        </div>
+        <div class="content">
+            <div class="workBx">
+                <img src="images/1.jpg" alt="">
+            </div>
+            <div class="workBx">
+                <img src="images/2.jpg" alt="">
+            </div>
+            <div class="workBx">
+                <img src="images/3.jpg" alt="">
+            </div>
+            <div class="workBx">
+                <img src="images/4.jpg" alt="">
+            </div>
+            <div class="heading">
+                <a href="#" class="btn">View more</a>
+            </div>
+        </div>
+    </section>
+    <section class="blog" id="blog">
+        <div class="heading white">
+            <h2>Blog</h2>
+            <p>---</p>
+        </div>
+        <div class="content">
+            <div class="serviceBx">
+                <img src="images/blog1.png" alt="">
+                <h3>Belajar Pemograman PHP</h3>
+
+            </div>
+            <div class="serviceBx">
+                <img src="images/blog2.png" alt="">
+                <h3>Aturan dasar dalam memilih tipe data yang baik</h3>
+
+            </div>
+            <div class="serviceBx">
+                <img src="images/blog3.jpg" alt="">
+                <h3>Tips memilih kode editor yang baik</h3>
+
+            </div>
+        </div>
+    </section>
+    <section class="team" id="team">
+        <div class="heading">
+            <h2>Team</h2>
+            <p>---</p>
+        </div>
+        <div class="content">
+            <div class="teamBx">
+                <img src="images/team1.jpg" alt="">
+                <h3>Alexander<br><span>Front End Developer</span></h3>
+            </div>
+            <div class="teamBx">
+                <img src="images/team2.jpg" alt="">
+                <h3>Jessica<br><span>Creative Designer</span></h3>
+            </div>
+            <div class="teamBx">
+                <img src="images/team3.jpg" alt="">
+                <h3>Micelle<br><span>UI/UX Expert</span></h3>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Contact</h2>
+            <p>---</p>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Contact Info</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>28292 Payung Sekaki,<br>Pekanbaru,<br>Riau</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>+62 - 813 - 2537 - 4330</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>saktiprawiranegara@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form>
+                    <h3>Message Me</h3>
+                    <input type="text" name="" placeholder="Full Name">
+                    <input type="email" name="" placeholder="Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>Copyright &copy; 2021 Sakti Prawira Negara. All Right Reserved.</p>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
